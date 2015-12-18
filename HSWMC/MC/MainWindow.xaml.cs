@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using MahApps.Metro.Controls;
+
+namespace MC
+{
+    /// <summary>
+    /// MainWindow.xaml 的交互逻辑
+    /// </summary>
+    public partial class MainWindow : MetroWindow
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            Application.Current.MainWindow = this;
+
+            Shuaxinshu();
+        }
+
+        private Shujuku shujuku = new Shujuku();
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        public void Shuaxinshu()
+        {
+            shujuku.Dispose();
+            shujuku = new Shujuku();
+            shuUI.ItemsSource = null;
+
+            var bumens = shujuku.BumenSet.ToList();
+            List<TreeViewItem> shu = new List<TreeViewItem>();
+
+            foreach (var bumen in bumens)
+            {
+                var bumenitem = new TreeViewItem();
+                bumenitem.Header = bumen.bumenmingcheng;
+                bumenitem.Tag = bumen;
+                shu.Add(bumenitem);
+            }
+
+            var xitongsheding = new TreeViewItem()
+            {
+                Header = "系统设定",
+                IsExpanded = true,
+                Tag = "系统设定",
+                ItemsSource = new List<TreeViewItem>
+                {
+                     new TreeViewItem() { Header = "部门操作" ,Tag="系统设定_部门操作"}
+                }
+            };
+
+            shu.Add(xitongsheding);
+
+            shuUI.ItemsSource = shu;
+        }
+
+        private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            shujuku.Dispose();
+        }
+
+        private void shuUI_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if (!(e.NewValue is TreeViewItem))
+            {
+                return;
+            }
+
+            var tag = ((TreeViewItem)e.NewValue).Tag;
+
+            if (tag is string)
+            {
+                var ls = (string)tag;
+                switch (ls)
+                {
+                    case "系统设定_部门操作":
+                        jiazaiqiUI.Content = new PAGE.SYST.Tianjiacaozuo.Bumencaozuo();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (tag is PAGE.SYST.Tianjiacaozuo.BumenSet)
+            {
+
+            }
+        }
+    }
+}
