@@ -32,8 +32,17 @@ namespace MC.PAGE.SYST.Tianjiacaozuo
 
         private List<BumenSet> bumen_shujuyuan
         {
-            set { bumenUI.ItemsSource = value; }
+            set
+            {
+                yuangong_shujuyuan = null;
+                bumenUI.ItemsSource = value;
+            }
             get { return (List<BumenSet>)bumenUI.ItemsSource; }
+        }
+        private List<YuangongSet> yuangong_shujuyuan
+        {
+            set { yuangongUI.ItemsSource = value; }
+            get { return (List<YuangongSet>)yuangongUI.ItemsSource; }
         }
 
         private BumenSet xuanzedebumen
@@ -43,6 +52,18 @@ namespace MC.PAGE.SYST.Tianjiacaozuo
                 if (bumenUI.SelectedItem != null)
                 {
                     return (BumenSet)bumenUI.SelectedItem;
+                }
+                return null;
+
+            }
+        }
+        private YuangongSet xuanzedeyuangong
+        {
+            get
+            {
+                if (yuangongUI.SelectedItem != null)
+                {
+                    return (YuangongSet)yuangongUI.SelectedItem;
                 }
                 return null;
 
@@ -97,6 +118,63 @@ namespace MC.PAGE.SYST.Tianjiacaozuo
             if ((bool)e.NewValue == false)
             {
                 shujuku.Dispose();
+            }
+        }
+
+        private async void yuangongkongzhiUI_Tianjia_Click(object sender, RoutedEventArgs e)
+        {
+            if (xuanzedebumen==null)
+            {
+                await MahApps.Metro.Controls.Dialogs.DialogManager.ShowMessageAsync(((MainWindow)Application.Current.MainWindow), "提示", "请先选择部门！");
+                return;
+            }
+            var tianjiayuangong = new PAGE.SYST.Tianjiacaozuo.Tianjiayuangong();
+            var xinyuangong = new YuangongSet();
+            tianjiayuangong.yuangong = xinyuangong;
+            tianjiayuangong.ShowDialog();
+
+            xuanzedebumen.yuangongs.Add(xinyuangong);
+            shujuku.SaveChanges();
+            yuangong_shujuyuan = xuanzedebumen.yuangongs.ToList();
+            ((MainWindow)Application.Current.MainWindow).Shuaxinshu();
+
+        }
+
+        private async void yuangongkongzhiUI_Xiugai_Click(object sender, RoutedEventArgs e)
+        {
+            if (xuanzedeyuangong == null)
+            {
+                await MahApps.Metro.Controls.Dialogs.DialogManager.ShowMessageAsync(((MainWindow)Application.Current.MainWindow), "提示", "请先选择员工！");
+                return;
+            }
+
+            var tianjiayuangong = new PAGE.SYST.Tianjiacaozuo.Tianjiayuangong();
+            tianjiayuangong.yuangong = xuanzedeyuangong;
+            tianjiayuangong.ShowDialog();
+            shujuku.SaveChanges();
+            ((MainWindow)Application.Current.MainWindow).Shuaxinshu();
+
+        }
+
+        private async void yuangongkongzhiUI_Shanchu_Click(object sender, RoutedEventArgs e)
+        {
+            if (xuanzedeyuangong == null)
+            {
+                await MahApps.Metro.Controls.Dialogs.DialogManager.ShowMessageAsync(((MainWindow)Application.Current.MainWindow), "提示", "请先选择员工！");
+                return;
+            }
+            shujuku.YuangongSet.Remove(xuanzedeyuangong);
+            shujuku.SaveChanges();
+            yuangong_shujuyuan = xuanzedebumen.yuangongs.ToList();
+            ((MainWindow)Application.Current.MainWindow).Shuaxinshu();
+
+        }
+
+        private void bumenUI_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (xuanzedebumen!=null)
+            {
+                yuangong_shujuyuan = xuanzedebumen.yuangongs.ToList();
             }
         }
     }

@@ -13,22 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 
-namespace MC.PAGE.SYST.Tianjiacaozuo
+namespace MC.PAGE.GONGZUOJIKU
 {
     /// <summary>
     /// Tianjiabumen.xaml 的交互逻辑
     /// </summary>
-    public partial class Tianjiabumen : MetroWindow
+    public partial class Tianjiashixiang : MetroWindow
     {
-        public Tianjiabumen()
+        public Tianjiashixiang()
         {
             InitializeComponent();
         }
 
-        public BumenSet bumen
+        public ShixiangSet shixiang
         {
-            set { bumenUI.DataContext = value; }
-            get { return (BumenSet)bumenUI.DataContext; }
+            set { shixiangUI.DataContext = value; }
+            get { return (ShixiangSet)shixiangUI.DataContext; }
         }
+       
     }
 }

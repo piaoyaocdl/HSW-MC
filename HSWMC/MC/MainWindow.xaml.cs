@@ -46,6 +46,18 @@ namespace MC
                 var bumenitem = new TreeViewItem();
                 bumenitem.Header = bumen.bumenmingcheng;
                 bumenitem.Tag = bumen;
+                bumenitem.IsExpanded = true;
+                
+                var yuangongshu = new List<TreeViewItem>();
+                foreach (var yuangong in bumen.yuangongs)
+                {
+                    var yuangongitem = new TreeViewItem();
+                    yuangongitem.Header = yuangong.yuangongmingzi;
+                    yuangongitem.Tag = yuangong;
+                    yuangongshu.Add(yuangongitem);
+                }
+                bumenitem.ItemsSource = yuangongshu;
+
                 shu.Add(bumenitem);
             }
 
@@ -91,9 +103,14 @@ namespace MC
                         break;
                 }
             }
-            if (tag is PAGE.SYST.Tianjiacaozuo.BumenSet)
+            if (tag is PAGE.SYST.Tianjiacaozuo.YuangongSet)
             {
-
+                var ls = (PAGE.SYST.Tianjiacaozuo.YuangongSet)tag;
+                var gongzuopage = new PAGE.GONGZUOJIKU.Gongzuojilu();
+                gongzuopage.yuangong = ls;
+                gongzuopage.shujuku = shujuku;
+                gongzuopage.yuangongmingziUI.Content = ls.yuangongmingzi;
+                jiazaiqiUI.Content = gongzuopage;
             }
         }
     }

@@ -26,8 +26,7 @@
                 </LinearGradientBrush>
             </Label.BorderBrush>
         </Label>
-        <DataGrid x:Name="bumenUI" ItemsSource="{Binding
-            }" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid x:Name="bumenUI" ItemsSource="{Binding}"  SelectionChanged="bumenUI_SelectionChanged" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="部门名称" Binding="{Binding bumenmingcheng}"/>
@@ -36,5 +35,12 @@
         <Grid Height="25">
             <KONGJIAN:Biaogekongzhi HorizontalAlignment="Right" x:Name="bumenkongzhiUI" Tianjia_Click="bumenkongzhiUI_Tianjia_Click" Xiugai_Click="bumenkongzhiUI_Xiugai_Click" Shanchu_Click="bumenkongzhiUI_Shanchu_Click" />
         </Grid>
+        <DataGrid x:Name="yuangongUI" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="员工名字" Binding="{Binding yuangongmingzi}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <KONGJIAN:Biaogekongzhi HorizontalAlignment="Right"  x:Name="yuangongkongzhiUI" Tianjia_Click="yuangongkongzhiUI_Tianjia_Click" Xiugai_Click="yuangongkongzhiUI_Xiugai_Click" Shanchu_Click="yuangongkongzhiUI_Shanchu_Click"/>
     </StackPanel>
 </Page>

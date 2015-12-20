@@ -18,17 +18,18 @@ namespace MC.PAGE.SYST.Tianjiacaozuo
     /// <summary>
     /// Tianjiabumen.xaml 的交互逻辑
     /// </summary>
-    public partial class Tianjiabumen : MetroWindow
+    public partial class Tianjiayuangong : MetroWindow
     {
-        public Tianjiabumen()
+        public Tianjiayuangong()
         {
             InitializeComponent();
         }
 
-        public BumenSet bumen
+        public YuangongSet yuangong
         {
-            set { bumenUI.DataContext = value; }
-            get { return (BumenSet)bumenUI.DataContext; }
+            set { yuangongUI.DataContext = value; }
+            get { return (YuangongSet)yuangongUI.DataContext; }
         }
+       
     }
 }

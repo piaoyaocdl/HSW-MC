@@ -81,8 +81,37 @@
     <Compile Include="Migrations\201512181547226_fefe.Designer.cs">
       <DependentUpon>201512181547226_fefe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512201113566_fewfew.cs" />
+    <Compile Include="Migrations\201512201113566_fewfew.Designer.cs">
+      <DependentUpon>201512201113566_fewfew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512201216451_jiji.cs" />
+    <Compile Include="Migrations\201512201216451_jiji.Designer.cs">
+      <DependentUpon>201512201216451_jiji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512201217514_jiji1.cs" />
+    <Compile Include="Migrations\201512201217514_jiji1.Designer.cs">
+      <DependentUpon>201512201217514_jiji1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512201257202_fefw.cs" />
+    <Compile Include="Migrations\201512201257202_fefw.Designer.cs">
+      <DependentUpon>201512201257202_fefw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PAGE\GONGZUOJIKU\Gongzuojilu.xaml.cs">
+      <DependentUpon>Gongzuojilu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGE\GONGZUOJIKU\SJ.cs" />
+    <Compile Include="PAGE\GONGZUOJIKU\Tianjiajindu.xaml.cs">
+      <DependentUpon>Tianjiajindu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PAGE\GONGZUOJIKU\Tianjiashixiang.xaml.cs">
+      <DependentUpon>Tianjiashixiang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGE\SYST\Tianjiacaozuo\SJ.cs" />
+    <Compile Include="PAGE\SYST\Tianjiacaozuo\Tianjiayuangong.xaml.cs">
+      <DependentUpon>Tianjiayuangong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PAGE\SYST\Tianjiacaozuo\Tianjiabumen.xaml.cs">
       <DependentUpon>Tianjiabumen.xaml</DependentUpon>
     </Compile>
@@ -103,9 +132,25 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PAGE\GONGZUOJIKU\Gongzuojilu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGE\GONGZUOJIKU\Tianjiajindu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PAGE\GONGZUOJIKU\Tianjiashixiang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PAGE\SYST\Tianjiacaozuo\Bumencaozuo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PAGE\SYST\Tianjiacaozuo\Tianjiayuangong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="PAGE\SYST\Tianjiacaozuo\Tianjiabumen.xaml">
       <SubType>Designer</SubType>
@@ -131,6 +176,18 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201512181547226_fefe.resx">
       <DependentUpon>201512181547226_fefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201113566_fewfew.resx">
+      <DependentUpon>201512201113566_fewfew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201216451_jiji.resx">
+      <DependentUpon>201512201216451_jiji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201217514_jiji1.resx">
+      <DependentUpon>201512201217514_jiji1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201257202_fefw.resx">
+      <DependentUpon>201512201257202_fefw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
