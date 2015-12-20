@@ -97,6 +97,14 @@
     <Compile Include="Migrations\201512201257202_fefw.Designer.cs">
       <DependentUpon>201512201257202_fefw.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512201331470_kokoko.cs" />
+    <Compile Include="Migrations\201512201331470_kokoko.Designer.cs">
+      <DependentUpon>201512201331470_kokoko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512201348319_bbubu.cs" />
+    <Compile Include="Migrations\201512201348319_bbubu.Designer.cs">
+      <DependentUpon>201512201348319_bbubu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PAGE\GONGZUOJIKU\Gongzuojilu.xaml.cs">
       <DependentUpon>Gongzuojilu.xaml</DependentUpon>
@@ -188,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512201257202_fefw.resx">
       <DependentUpon>201512201257202_fefw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201331470_kokoko.resx">
+      <DependentUpon>201512201331470_kokoko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201348319_bbubu.resx">
+      <DependentUpon>201512201348319_bbubu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

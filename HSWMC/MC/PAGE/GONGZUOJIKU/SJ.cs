@@ -8,9 +8,14 @@ namespace MC.PAGE.GONGZUOJIKU
 {
     public class ShixiangSet
     {
+       public ShixiangSet()
+        {
+            jindus = new List<ShixiangjinduSet>(0);
+        }
         public long Id { set; get; }
         public string shixiang { set; get; }
         public string beizhu { set; get; }
+        public bool yiwanjie { set; get; }
         public virtual ICollection<ShixiangjinduSet> jindus { set; get; }
     }
 

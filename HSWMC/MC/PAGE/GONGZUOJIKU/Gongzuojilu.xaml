@@ -18,20 +18,25 @@
                 </LinearGradientBrush>
             </Label.BorderBrush>
         </Label>
-        <Label x:Name="label1" Content="事项" FontSize="16" BorderThickness="2">
-            <Label.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0017FF" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.904"/>
-                </LinearGradientBrush>
-            </Label.BorderBrush>
-        </Label>
+        <StackPanel Orientation="Horizontal" >
+            <Label x:Name="label1" Content="事项" FontSize="16" BorderThickness="2" Width="995">
+                <Label.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF0017FF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.904"/>
+                    </LinearGradientBrush>
+                </Label.BorderBrush>
+            </Label>
+            <CheckBox x:Name="guolvwanjieUI" IsChecked="True" Click="guolvwanjieUI_Click" Content="屏蔽已完结"/>
+
+        </StackPanel>
 
         <DataGrid x:Name="shixiangUI" SelectionChanged="shixiangUI_SelectionChanged" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="事项" Binding="{Binding shixiang}"/>
                 <DataGridTextColumn Header="备注" Binding="{Binding beizhu}"/>
+                <DataGridTextColumn Header="已完结" Binding="{Binding yiwanjie}"/>
             </DataGrid.Columns>
         </DataGrid>
         <KONGJIAN:Biaogekongzhi x:Name="shixiangkongzhiUI" Tianjia_Click="shixiangkongzhiUI_Tianjia_Click" Xiugai_Click="shixiangkongzhiUI_Xiugai_Click" Shanchu_Click="shixiangkongzhiUI_Shanchu_Click" HorizontalAlignment="Right" />

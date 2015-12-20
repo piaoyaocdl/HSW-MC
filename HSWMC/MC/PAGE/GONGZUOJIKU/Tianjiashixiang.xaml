@@ -20,9 +20,10 @@
             <RowDefinition Height="537*"/>
         </Grid.RowDefinitions>
         <Label x:Name="label" Content="事项" HorizontalAlignment="Left" Margin="56,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="fefefe" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding shixiang}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="fefefe" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding shixiang}" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Copy" Content="备注" HorizontalAlignment="Left" Margin="56,10,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <TextBox x:Name="beizhuUI" Grid.Column="1" HorizontalAlignment="Left" Height="60" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding beizhu}" VerticalAlignment="Top" Width="280" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <CheckBox x:Name="checkBox" Content="完结" IsChecked="{Binding yiwanjie}" Grid.Column="2" HorizontalAlignment="Left" Margin="170,14,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Controls:MetroWindow>

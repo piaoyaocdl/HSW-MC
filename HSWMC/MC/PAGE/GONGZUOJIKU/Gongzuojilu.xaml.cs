@@ -108,7 +108,7 @@ namespace MC.PAGE.GONGZUOJIKU
         {
             if (yuangong.shixiangs != null)
             {
-                shixiang_shujuyuan = yuangong.shixiangs.ToList();
+                shixiang_shujuyuan = yuangong.shixiangs.Where(x=>x.yiwanjie!=true).ToList();
             }
         }
 
@@ -157,12 +157,24 @@ namespace MC.PAGE.GONGZUOJIKU
 
         private void shixiangUI_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (xuanzedeshixiang.jindus==null)
+            if (xuanzedeshixiang!=null &&xuanzedeshixiang.jindus!=null)
             {
-                xuanzedeshixiang.jindus = new List<ShixiangjinduSet>(0); 
+                jindu_shujuyuan = xuanzedeshixiang.jindus.ToList();
             }
-            jindu_shujuyuan = xuanzedeshixiang.jindus.ToList();
+        }
 
+        private void guolvwanjieUI_Click(object sender, RoutedEventArgs e)
+        {
+            var guolv = (bool)((CheckBox)sender).IsChecked;
+            if (guolv)
+            {
+                shixiang_shujuyuan = yuangong.shixiangs.Where(x => x.yiwanjie != true).ToList();
+            }
+            else
+            {
+                shixiang_shujuyuan = yuangong.shixiangs.ToList();
+
+            }
         }
     }
 }
