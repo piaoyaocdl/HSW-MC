@@ -17,6 +17,9 @@ namespace MC.PAGE.GONGZUOJIKU
         public string beizhu { set; get; }
         public bool yiwanjie { set; get; }
         public virtual ICollection<ShixiangjinduSet> jindus { set; get; }
+
+        public long yuangongId { set; get; }
+        public virtual PAGE.SYST.Tianjiacaozuo.YuangongSet yuangong { set; get; }
     }
 
     public class ShixiangjinduSet
@@ -24,5 +27,8 @@ namespace MC.PAGE.GONGZUOJIKU
         public long Id { set; get; }
         public Nullable<DateTime> shijian { set; get; }
         public string jindu { set; get; }
+
+        public long shixiangId { set; get; }
+        public virtual ShixiangSet shixiang { set; get; }
     }
 }

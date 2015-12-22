@@ -19,10 +19,19 @@ namespace MC.PAGE.SYST.Tianjiacaozuo
     }
     public class YuangongSet
     {
+        public YuangongSet()
+        {
+            shixiangs = new List<PAGE.GONGZUOJIKU.ShixiangSet>(0);
+        }
         public long Id { set; get; }
 
         public string yuangongmingzi { set; get; }
 
         public virtual ICollection<PAGE.GONGZUOJIKU.ShixiangSet> shixiangs { set; get; }
+
+        public long bumenId { set; get; }
+        public virtual BumenSet bumen { set; get; }
     }
+
+
 }

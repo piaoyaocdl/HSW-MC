@@ -25,6 +25,9 @@ namespace MC
         {
             InitializeComponent();
             Application.Current.MainWindow = this;
+            shujuku.ShixiangjinduSet.RemoveRange(shujuku.ShixiangjinduSet.Where(x => x.shixiang == null));
+            shujuku.ShixiangSet.RemoveRange(shujuku.ShixiangSet.Where(x => x.yuangong == null));
+            shujuku.YuangongSet.RemoveRange(shujuku.YuangongSet.Where(x => x.bumen == null));
 
             Shuaxinshu();
         }

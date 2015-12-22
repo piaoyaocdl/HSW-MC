@@ -6,14 +6,14 @@ namespace MC.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class bbubu : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
+    public sealed partial class gr4wgw : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(bbubu));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(gr4wgw));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512201348319_bbubu"; }
+            get { return "201512210855414_gr4wgw"; }
         }
         
         string IMigrationMetadata.Source

@@ -30,6 +30,7 @@ namespace MC.PAGE.GONGZUOJIKU
             set { jinduUI.DataContext = value; }
             get { return (ShixiangjinduSet)jinduUI.DataContext; }
         }
+
        
     }
 }

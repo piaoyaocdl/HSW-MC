@@ -36,11 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
@@ -77,33 +77,17 @@
     <Compile Include="KONGJIAN\Biaogekongzhi.xaml.cs">
       <DependentUpon>Biaogekongzhi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512181547226_fefe.cs" />
-    <Compile Include="Migrations\201512181547226_fefe.Designer.cs">
-      <DependentUpon>201512181547226_fefe.cs</DependentUpon>
+    <Compile Include="Migrations\201512210848288_fewfew.cs" />
+    <Compile Include="Migrations\201512210848288_fewfew.Designer.cs">
+      <DependentUpon>201512210848288_fewfew.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512201113566_fewfew.cs" />
-    <Compile Include="Migrations\201512201113566_fewfew.Designer.cs">
-      <DependentUpon>201512201113566_fewfew.cs</DependentUpon>
+    <Compile Include="Migrations\201512210855414_gr4wgw.cs" />
+    <Compile Include="Migrations\201512210855414_gr4wgw.Designer.cs">
+      <DependentUpon>201512210855414_gr4wgw.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512201216451_jiji.cs" />
-    <Compile Include="Migrations\201512201216451_jiji.Designer.cs">
-      <DependentUpon>201512201216451_jiji.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512201217514_jiji1.cs" />
-    <Compile Include="Migrations\201512201217514_jiji1.Designer.cs">
-      <DependentUpon>201512201217514_jiji1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512201257202_fefw.cs" />
-    <Compile Include="Migrations\201512201257202_fefw.Designer.cs">
-      <DependentUpon>201512201257202_fefw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512201331470_kokoko.cs" />
-    <Compile Include="Migrations\201512201331470_kokoko.Designer.cs">
-      <DependentUpon>201512201331470_kokoko.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512201348319_bbubu.cs" />
-    <Compile Include="Migrations\201512201348319_bbubu.Designer.cs">
-      <DependentUpon>201512201348319_bbubu.cs</DependentUpon>
+    <Compile Include="Migrations\201512210859380_fewfew1.cs" />
+    <Compile Include="Migrations\201512210859380_fewfew1.Designer.cs">
+      <DependentUpon>201512210859380_fewfew1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PAGE\GONGZUOJIKU\Gongzuojilu.xaml.cs">
@@ -182,26 +166,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201512181547226_fefe.resx">
-      <DependentUpon>201512181547226_fefe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512210848288_fewfew.resx">
+      <DependentUpon>201512210848288_fewfew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201113566_fewfew.resx">
-      <DependentUpon>201512201113566_fewfew.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512210855414_gr4wgw.resx">
+      <DependentUpon>201512210855414_gr4wgw.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201216451_jiji.resx">
-      <DependentUpon>201512201216451_jiji.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201217514_jiji1.resx">
-      <DependentUpon>201512201217514_jiji1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201257202_fefw.resx">
-      <DependentUpon>201512201257202_fefw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201331470_kokoko.resx">
-      <DependentUpon>201512201331470_kokoko.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512201348319_bbubu.resx">
-      <DependentUpon>201512201348319_bbubu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512210859380_fewfew1.resx">
+      <DependentUpon>201512210859380_fewfew1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
